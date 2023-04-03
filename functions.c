@@ -1,10 +1,10 @@
 #include "main.h"
 
-/************************* PRINT CHAR *************************/
+/* PRINT CHAR */
 
 /**
- * print_char - Prints a char
- * @types: List a of arguments
+ * print_char - Prints a character 
+ * @types: List a list of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: Width
@@ -19,13 +19,14 @@ int print_char(va_list types, char buffer[],
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
-/************************* PRINT A STRING *************************/
+
+/*PRINT A STRING */
 /**
  * print_string - Prints a string
  * @types: List a of arguments
- * @buffer: Buffer array to handle print
+ * @buffer: Buffer array that handles print
  * @flags:  Calculates active flags
- * @width: get width.
+ * @width: gets width
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Number of chars printed
@@ -74,10 +75,10 @@ int print_string(va_list types, char buffer[],
 
 	return (write(1, str, length));
 }
-/************************* PRINT PERCENT SIGN *************************/
+/* PRINTS % */
 /**
- * print_percent - Prints a percent sign
- * @types: Lista of arguments
+ * print_percent - Prints modular sign
+ * @types: Lists  arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width.
@@ -97,9 +98,9 @@ int print_percent(va_list types, char buffer[],
 	return (write(1, "%%", 1));
 }
 
-/************************* PRINT INT *************************/
+/* PRINT INTEGERS */
 /**
- * print_int - Print int
+ * print_int - Print integers 
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -141,10 +142,10 @@ int print_int(va_list types, char buffer[],
 	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
 
-/************************* PRINT BINARY *************************/
+/* PRINT BASE 2 NUMBERS */
 /**
  * print_binary - Prints an unsigned number
- * @types: Lista of arguments
+ * @types: Lists arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width.
